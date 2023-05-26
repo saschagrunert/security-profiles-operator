@@ -21,8 +21,8 @@ import (
 	"io"
 	"time"
 
-	"github.com/cyberphone/json-canonicalization/go/src/webpki.org/jsoncanonicalizer"
 	sigsig "github.com/sigstore/sigstore/pkg/signature"
+	cjson "github.com/tent/canonical-json-go"
 	"github.com/theupdateframework/go-tuf/data"
 	"github.com/theupdateframework/go-tuf/verify"
 )
@@ -70,11 +70,13 @@ func (s Signature) CanonicalValue() ([]byte, error) {
 	if s.signed == nil {
 		return nil, fmt.Errorf("tuf manifest has not been initialized")
 	}
-	marshalledBytes, err := json.Marshal(s.signed)
+	// TODO(asraa): Should the Signed payload be canonicalized?
+	canonical, err := cjson.Marshal(s.signed)
 	if err != nil {
-		return nil, fmt.Errorf("marshalling signature: %w", err)
+		return nil, err
 	}
-	return jsoncanonicalizer.Transform(marshalledBytes)
+
+	return canonical, nil
 }
 
 // Verify implements the pki.Signature interface
@@ -138,14 +140,16 @@ func NewPublicKey(r io.Reader) (*PublicKey, error) {
 
 // CanonicalValue implements the pki.PublicKey interface
 func (k PublicKey) CanonicalValue() (encoded []byte, err error) {
+	// TODO(asraa): Should the Signed payload be canonicalized?
 	if k.root == nil {
 		return nil, fmt.Errorf("tuf root has not been initialized")
 	}
-	marshalledBytes, err := json.Marshal(k.root)
+	canonical, err := cjson.Marshal(k.root)
 	if err != nil {
-		return nil, fmt.Errorf("marshalling tuf root: %w", err)
+		return nil, err
 	}
-	return jsoncanonicalizer.Transform(marshalledBytes)
+
+	return canonical, nil
 }
 
 func (k PublicKey) SpecVersion() (string, error) {

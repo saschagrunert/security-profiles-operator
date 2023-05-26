@@ -7,7 +7,7 @@ require (
 	github.com/aquasecurity/libbpfgo v0.4.8-libbpf-1.2.0.0.20230509162948-80f41e18e690
 	github.com/blang/semver/v4 v4.0.0
 	github.com/cert-manager/cert-manager v1.12.1
-	github.com/containers/common v0.53.0
+	github.com/containers/common v0.49.3
 	github.com/go-logr/logr v1.2.4
 	github.com/google/go-containerregistry v0.14.1-0.20230409045903-ed5c185df419
 	github.com/imdario/mergo v0.3.15
@@ -15,7 +15,7 @@ require (
 	github.com/maxbrunsfeld/counterfeiter/v6 v6.6.1
 	github.com/mogensen/kubernetes-split-yaml v0.4.0
 	github.com/nxadm/tail v1.4.8
-	github.com/opencontainers/image-spec v1.1.0-rc2.0.20221005185240-3a7f492d3f1b
+	github.com/opencontainers/image-spec v1.1.0-rc2
 	github.com/opencontainers/runc v1.1.7
 	github.com/opencontainers/runtime-spec v1.1.0-rc.2
 	github.com/openshift/api v0.0.0-20221205111557-f2fbb1d1cd5e
@@ -208,7 +208,7 @@ require (
 	github.com/segmentio/ksuid v1.0.4 // indirect
 	github.com/shibumi/go-pathspec v1.3.0 // indirect
 	github.com/sigstore/fulcio v1.2.0 // indirect
-	github.com/sigstore/rekor v1.1.1 // indirect
+	github.com/sigstore/rekor v1.1.0 // indirect
 	github.com/sigstore/sigstore v1.6.3 // indirect
 	github.com/sigstore/timestamp-authority v1.0.0 // indirect
 	github.com/sirupsen/logrus v1.9.0 // indirect
@@ -223,6 +223,7 @@ require (
 	github.com/subosito/gotenv v1.4.2 // indirect
 	github.com/syndtr/goleveldb v1.0.1-0.20220721030215-126854af5e6d // indirect
 	github.com/tchap/go-patricia/v2 v2.3.1 // indirect
+	github.com/tent/canonical-json-go v0.0.0-20130607151641-96e4ba3a7613 // indirect
 	github.com/thales-e-security/pool v0.0.2 // indirect
 	github.com/theupdateframework/go-tuf v0.5.2 // indirect
 	github.com/titanous/rocacheck v0.0.0-20171023193734-afe73141d399 // indirect
