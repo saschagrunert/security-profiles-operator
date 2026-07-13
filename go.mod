@@ -32,7 +32,7 @@ require (
 	github.com/urfave/cli/v2 v2.27.7
 	go.podman.io/common v0.68.0
 	golang.org/x/mod v0.37.0
-	golang.org/x/sync v0.21.0
+	golang.org/x/sync v0.22.0
 	gomodules.xyz/jsonpatch/v2 v2.5.0
 	google.golang.org/grpc v1.82.0
 	google.golang.org/grpc/cmd/protoc-gen-go-grpc v1.6.2
@@ -45,7 +45,7 @@ require (
 	k8s.io/client-go v0.36.2
 	k8s.io/klog/v2 v2.140.0
 	k8s.io/utils v0.0.0-20260507154919-ff6756f316d2
-	oras.land/oras-go/v2 v2.6.1
+	oras.land/oras-go/v2 v2.6.2
 	sigs.k8s.io/controller-runtime v0.24.1
 	sigs.k8s.io/controller-tools v0.21.0
 	sigs.k8s.io/release-utils v0.12.4
