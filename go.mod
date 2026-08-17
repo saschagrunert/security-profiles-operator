@@ -28,7 +28,7 @@ require (
 	github.com/saschagrunert/security-profiles-merger v0.3.2
 	github.com/seccomp/libseccomp-golang v0.11.1
 	github.com/sigstore/cosign/v2 v2.6.4
-	github.com/stretchr/testify v1.11.1
+	github.com/stretchr/testify v1.12.0
 	github.com/urfave/cli/v2 v2.27.7
 	go.podman.io/common v0.69.0
 	golang.org/x/mod v0.38.0
